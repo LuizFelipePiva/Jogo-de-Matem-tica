@@ -1,0 +1,296 @@
+body {
+    background-color: #aeddf7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.labelNome, .labelDificuldade, .escolhaConta, .resolveConta, .modalResult{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: relative;
+    transform: none;
+    display: none; /* Esconde todas as divs inicialmente */
+}
+
+.labelNome {
+    display: block; /* Mostra apenas a div labelNome */
+}
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.inputNome {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nomeDigitado {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.btn {
+    margin-top: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px 30px; /* Ajuste de tamanho para todos os botões */
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.8s, box-shadow 0.8s;
+}
+
+.btn:hover {
+    background-color: #aeddf7;
+    box-shadow: 0 0 70px rgba(139, 216, 235, 0.8);
+}
+
+.someLabel {
+    display: none;
+}
+
+.apareceLabel, .apareceConta, .apareceFinal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.facil, .medio, .dificil {
+    padding: 15px 30px; /* Ajuste o tamanho dos botões de dificuldade */
+}
+
+.facil:hover {
+    background-color: rgb(160, 229, 153);
+    box-shadow: 0 0 50px rgba(132, 245, 80, 0.8);
+}
+
+.medio:hover {
+    background-color: rgb(241, 241, 144);
+    box-shadow: 0 0 50px rgb(250, 250, 95);
+}
+
+.dificil:hover {
+    background-color: rgb(245, 119, 119);
+    box-shadow: 0 0 50px rgb(238, 106, 106);
+}
+
+.btnVoltar {
+    display: flex;
+    justify-content: center;
+}
+
+.btnVoltar button {
+    padding: 15px 30px; /* Ajuste o tamanho dos botões "Voltar" */
+}
+
+.btnVoltar button:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 20px black;
+}
+
+.espacoConta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(191, 198, 206);
+    padding: 20px;
+    border: solid 2px #000000;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.resolveConta input {
+    margin-top: 20px;
+}
+
+.resolveConta button {
+    margin-top: 20px;
+}
+
+#lblnum1, #lblnum2, #lblopcao, #lblcontador {
+    visibility: hidden;
+}
+
+.gerarCalculo {
+    visibility: hidden;
+}
+
+.apareceBotaoNovoCalculo {
+    visibility: visible;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+@media (min-width: 600px) {
+    .labelNome, .labelDificuldade, .escolhaConta, .resolveConta {
+        width: 400px;
+    }
+}
+
+@media (max-width: 599px) {
+    .labelNome, .labelDificuldade, .escolhaConta, .resolveConta {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .inputNome {
+        font-size: 18px;
+    }
+
+    .nomeDigitado {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .espacoConta {
+        padding: 10px;
+    }
+
+    .resolveConta input {
+        font-size: 16px;
+    }
+
+    .resolveConta button {
+        font-size: 16px;
+    }
+}
+
+.btnEnviar{
+
+    margin-top: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px 30px; /* Ajuste de tamanho para todos os botões */
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.8s, box-shadow 0.8s;
+}
+
+.btnEnviar:hover{
+    background-color: #aeddf7;
+    box-shadow: 0 0 70px rgba(139, 216, 235, 0.8);
+}
+
+.desativa{
+    cursor:not-allowed;
+}
+
+.btnParar{
+    display: none;
+    margin-top: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px 30px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.8s, box-shadow 0.8s;
+}
+
+.btnParar:hover{
+    background-color: #000000;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.ativarBotao{
+    display: block;
+}
+
+.modalResult{
+    background-color: rgba(0,0,0,0.9);
+    position:absolute;
+    width: 100%;
+    padding: 70px;
+    height: 100px;
+    color:white;
+
+}
+
+.apareceModalResult{
+    display:block;
+}
+
+.btnFechaModal{
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btnFechaModal:hover{
+    background-color: #aeddf7;
+    box-shadow: 0 0 15px rgba(139, 216, 235, 0.8);
+    transition-duration: 0.5s;
+}
+
+.acerto{
+    display: none;
+    position: absolute;
+    background-color: rgba(29, 209, 161,1.0);
+    padding: 90px;
+    padding-top: 35px;
+    padding-bottom: 35px; 
+    color:white;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.erro{
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 121, 121,1.0);
+    padding: 110px;
+    padding-top: 35px;
+    padding-bottom: 35px; 
+    color:white;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.aparecerErroOuAcerto{
+    display: block;
+}
+
+.imgAcertoErro{
+    max-width: 100px;
+    max-height: 100px;
+}
